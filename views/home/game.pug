@@ -1,4 +1,16 @@
 extends ../shared/template
 block content
-  h1 Game
-  
+  h1 Welcome to Play Hangman
+
+    h2= 'This word contains ' + word.length +' characters.'
+    h5= 'This word is ' + word
+
+    .col-xs-4
+      img.img-responsive.thumbnail.alien(src='http://static3.gamespot.com/uploads/square_medium/mig/5/2/8/2/1005282-964572_20090912_007.jpg')
+    .col-xs-8
+      form(action='/game', method='get')
+        .form-group
+          label Letter
+          input(type='text', name='Letter', maxlength='1')
+        .form-group
+          button.btn.btn-primary(type='submit') Start

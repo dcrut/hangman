@@ -1,18 +1,12 @@
 extends ../shared/template
 block content
-  button#btn1 Start
-  button#btn2 Timer
-  button#btn3 Clear
-  button#btn4 Numbers
-  input#txt1(type='text')
-  ul#numbers
-  h1 Hello12133
-  h2 World
-  h3 Awesome
-  div dA
-  div dB
-  #alpha Alpha
-  #beta Beta
-  .alert alert 1
-  .alert alert 2
-  #gamma.alert alert 3
+  h1 Welcome to Play Hangman
+  .col-xs-6
+    img.img-responsive.thumbnail.alien(src='http://static3.gamespot.com/uploads/square_medium/mig/5/2/8/2/1005282-964572_20090912_007.jpg')
+  .col-xs-6
+    form(action='/game', method='get')
+      .form-group
+        label Name
+        input(type='text', name='name')
+      .form-group
+        button.btn.btn-primary(type='submit') Start

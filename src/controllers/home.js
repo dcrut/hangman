@@ -2,13 +2,16 @@
 
 import express from 'express';
 const router = module.exports = express.Router();
+import Word from '../models/word';
 
 router.get('/', (req, res) => {
   res.render('home/index');
 });
 
 router.get('/game', (req, res) => {
-  res.render('home/game');
+  const word = Word.find();
+  console.log('home.js controller : ', req.body);
+  res.render('home/game', { word });
 });
 
 router.get('/about', (req, res) => {
