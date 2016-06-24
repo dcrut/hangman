@@ -12,10 +12,8 @@ router.get('/', (req, res) => {
 router.get('/game', (req, res) => {
 
   const word = Word.find();
-  console.log('home.js controller : ', req.body);
+  console.log('home.js controller : ', req.params.name);
   res.render('home/game', { word });
-  res.render('home/game');
-
 });
 
 router.get('/about', (req, res) => {
