@@ -20,7 +20,13 @@ function clear() {
   clearInterval(id);
 }
 
-function timer() {
+setTimeout(function () {
+  let end = Date.now() + 100000;
+  while (Date.now() < end)
+  console.log('setTimeout');
+}, 100)
+
+s
   id = setInterval(function(){
     $('body').css('background-color', randomColor());
   }, 100);

@@ -1,5 +1,6 @@
 extends ../shared/template
 block content
+
   h1 Welcome to Play Hangman
 
     h2= 'This word contains ' + word.length +' characters.'
@@ -14,3 +15,5 @@ block content
           input(type='text', name='Letter', maxlength='1')
         .form-group
           button.btn.btn-primary(type='submit') Start
+          
+  h1 Game
